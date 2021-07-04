@@ -1,0 +1,21 @@
+@import url('https://static.nebenan.de/fonts/Open+Sans_300,400,600.css');
+
+:root {
+  --font-family: 'Open Sans', Arial, sans-serif;
+  --title-font-family: var(--font-family);
+  --green1: #b2ca06;
+  --green2: var(--green1);
+  --green3: #48dfb2;
+  --dark1: rgba(0, 0, 0, 0.6);
+
+  font-family: var(--font-family);
+}
+
+h1, h2, h3 {
+  font-font: var(--title-font-family);
+}
+
+button {
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+}

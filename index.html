@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Klaro tutorial</title>
+    <meta name="description" content="Example page with klaro integration.">
+    <meta name="keywords" content="Klaro example integration">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- Klaro integration -->
+    <link rel="stylesheet" href="libs/klaro/v0.7/klaro.min.css">
+    <script defer type="application/javascript" src="libs/klaro/klaro.config.js"></script>
+    <script defer type="application/javascript" data-config="klaroConfig" src="libs/klaro/v0.7/klaro-no-css.js"></script>
+    <!-- GTM with GA managed by Klaro CMP -->
+    <script type="text/plain"
+            data-type="application/javascript"
+            data-name="gtm">
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-XXXXX');
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>Some klaro configuration test</h1>
+    </header>
+    <div class="main">
+      <ul>
+        <li>Must not load GTM w/o consent</li>
+        <li>Must load after consent</li>
+        <li>Must remove cookies when consent is revoked later on</li>
+      </ul>
+    </div>
+    <footer>
+      <button onclick="klaro.show()">Change consent settings</button>
+    </footer>
+  </body>
+</html>
