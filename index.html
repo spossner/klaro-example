@@ -1,16 +1,23 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Klaro tutorial</title>
-    <meta name="description" content="Example page with klaro integration.">
-    <meta name="keywords" content="Klaro example integration">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+
+    <title>Klaro tutorial</title>
+
     <!-- Klaro integration -->
     <link rel="stylesheet" href="libs/klaro/v0.7/klaro.min.css">
     <script defer type="application/javascript" src="libs/klaro/klaro.config.js"></script>
-    <script defer type="application/javascript" data-config="klaroConfig" src="libs/klaro/v0.7/klaro-no-css.js"></script>
+    <script defer type="application/javascript" data-config="klaroConfig"
+            src="libs/klaro/v0.7/klaro-no-css.js"></script>
+
     <!-- GTM with GA managed by Klaro CMP -->
     <script type="text/plain"
             data-type="application/javascript"
@@ -19,22 +26,61 @@
       new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
       j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-XXXXX');
+      })(window,document,'script','dataLayer','GTM-WQN4SPK');
+
     </script>
-  </head>
-  <body>
+    <!-- END GTM -->
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">KLARO</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">GTM</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="youtube.html">Youtube</a>
+                </li>
+                <!--li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        Dropdown link
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li-->
+            </ul>
+        </div>
+    </div>
+</nav>
+  <div class="container">
     <header>
-      <h1>Some klaro configuration test</h1>
+        <h1>Some klaro configuration test</h1>
     </header>
     <div class="main">
-      <ul>
-        <li>Must not load GTM w/o consent</li>
-        <li>Must load after consent</li>
-        <li>Must remove cookies when consent is revoked later on</li>
-      </ul>
+        <ul>
+            <li>Must not load GTM w/o consent</li>
+            <li>Must load after consent</li>
+            <li>Must remove cookies when consent is revoked later on</li>
+        </ul>
     </div>
     <footer>
-      <button onclick="klaro.show()">Change consent settings</button>
+        <button type="button" class="btn btn-primary" onclick="klaro.show()">Change consent settings</button>
     </footer>
-  </body>
+  </div>
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
 </html>
